@@ -50,7 +50,7 @@ const courses = [
 
 const showMore = ref(false);
 </script>
-
+ 
 <template>
   <div class="ml-[6.5%] w-[56%] text-left mt-[2%]">
     <h1 class="text-2xl font-bold mb-8">Students also bought</h1>
