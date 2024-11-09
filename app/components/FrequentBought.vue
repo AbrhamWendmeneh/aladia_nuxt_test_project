@@ -9,7 +9,6 @@ const courses = [
     rating: 4.5,
     reviews: 9386,
     price: "$74.99",
-    image: "/assets/images/ztm.svg",
     bestseller: false,
     highestRated: false,
   },
@@ -20,7 +19,6 @@ const courses = [
     rating: 4.8,
     reviews: 86209,
     price: "$74.99",
-    image: "/assets/images/second_image.svg",
     bestseller: true,
     highestRated: false,
   },
@@ -31,7 +29,6 @@ const courses = [
     rating: 4.7,
     reviews: 4021,
     price: "$59.99",
-    image: "/assets/images/third_image.svg",
     bestseller: false,
     highestRated: true,
   },
@@ -42,13 +39,21 @@ const courses = [
     rating: 4.7,
     reviews: 4021,
     price: "$59.99",
-    image: "/assets/images/image-1.svg",
     bestseller: false,
     highestRated: false,
   },
 ];
 
 const showMore = ref(false);
+const getImagePath = (index: number) => {
+  const images = [
+    "/assets/images/ztm.svg",
+    "/assets/images/second_image.svg",
+    "/assets/images/third_image.svg",
+    "/assets/images/image-1.svg",
+  ];
+  return images[index];
+};
 </script>
 
 <template>
@@ -58,8 +63,8 @@ const showMore = ref(false);
       <div v-if="index < 3 || showMore" class="flex items-start space-x-4">
         <!-- Course Image -->
         <img
-          :src=course.image
-          :alt=course.title
+          :src="getImagePath(index)"
+          :alt="course.title"
           class="w-24 h-24 object-cover rounded-md"
         />
 

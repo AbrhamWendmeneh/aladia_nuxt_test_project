@@ -6,7 +6,7 @@ const courses = [
     rating: 4.7,
     reviews: 4863,
     price: "$59.99",
-    image: "/assets/images/image-1.svg",
+    // image: "/assets/images/image-1.svg",
     bestseller: true,
   },
   {
@@ -15,7 +15,7 @@ const courses = [
     rating: 4.7,
     reviews: 32984,
     price: "$59.99",
-    image: "/assets/images/ztm.svg",
+    // image: "/assets/images/ztm.svg",
     bestseller: true,
   },
   {
@@ -24,10 +24,19 @@ const courses = [
     rating: 4.7,
     reviews: 32984,
     price: "$59.99",
-    image: "/assets/images/second_image.svg",
+    // image: "/assets/images/second_image.svg",
     bestseller: false,
   },
 ];
+const getImagePath = (index: number) => {
+  const images = [
+    "/assets/images/image-1.svg",
+    "/assets/images/ztm.svg",
+    "/assets/images/second_image.svg",
+  
+  ];
+  return images[index];
+};
 </script>
 
 <template>
@@ -40,7 +49,7 @@ const courses = [
       <div class="flex items-center space-x-2 course-item">
         <!-- Course Image -->
         <img
-          :src=course.image
+          :src="getImagePath(index)"
           :alt=course.title
           class="w-48 h-28 object-cover"
         />
