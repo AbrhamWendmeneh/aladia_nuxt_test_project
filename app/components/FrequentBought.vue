@@ -146,7 +146,3 @@ const showMore = ref(false);
     </button>
   </div>
 </template>
-
-<style scoped>
-/* Custom styles if needed */
-</style>

@@ -36,6 +36,5 @@
     >
       <h5>5 more sections</h5>
     </div>
-    <!-- <FrequentBought /> -->
   </div>
 </template>
