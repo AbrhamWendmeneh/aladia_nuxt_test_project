@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         deep: true,
       },
     },
-  },
+  }, 
 
   unhead: {
     renderSSRHeadOptions: {
