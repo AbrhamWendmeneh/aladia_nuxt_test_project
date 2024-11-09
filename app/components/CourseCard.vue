@@ -3,7 +3,7 @@
     <img
       :src="course.image"
       :alt="course.title"
-      class="w-full h-40 object-cover mb-4"
+      class="w-full h-36 object-cover mb-4"
     />
     <h3 class="text-lg font-semibold mb-2">{{ course.title }}</h3>
     <p class="text-sm text-gray-600 mb-2">{{ course.instructor }}</p>

@@ -9,29 +9,29 @@ const courses = [
     rating: 4.5,
     reviews: 9386,
     price: "$74.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/ztm.svg",
     bestseller: false,
     highestRated: false,
   },
   {
-    title: "Complete Web Design: from Figma to Webflow - 2024 UI",
+    title: "Complete Figma Mega Course: UI/UX Design Beginner to Expert",
     totalHours: "21.5 total hours",
     updatedDate: "Updated 11/2024",
     rating: 4.8,
     reviews: 86209,
     price: "$74.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/second_image.svg",
     bestseller: true,
     highestRated: false,
   },
   {
-    title: "Master Figma for Web Design & Freelancing: Learn UI/UX",
+    title: "Complete Web Design: from Figma to Webflow - 2024 UI",
     totalHours: "12.5 total hours",
     updatedDate: "Updated 10/2024",
     rating: 4.7,
     reviews: 4021,
     price: "$59.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/third_image.svg",
     bestseller: false,
     highestRated: true,
   },
@@ -42,7 +42,7 @@ const courses = [
     rating: 4.7,
     reviews: 4021,
     price: "$59.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/image-1.svg",
     bestseller: false,
     highestRated: false,
   },
@@ -50,7 +50,7 @@ const courses = [
 
 const showMore = ref(false);
 </script>
- 
+
 <template>
   <div class="ml-[6.5%] w-[56%] text-left mt-[2%]">
     <h1 class="text-2xl font-bold mb-8">Students also bought</h1>

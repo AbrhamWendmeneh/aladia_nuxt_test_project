@@ -10,7 +10,7 @@ export default {
         reviews: 246437,
         students: 790451,
         courses: 34,
-        image: "/assets/images/image.jpg",
+        image: "/assets/images/image-1.svg",
         description: `Sharing is who I am, and teaching is where I am at my best, because I've been on both sides of that equation, and getting to deliver useful training is my meaningful way to be a part of the creative community.
           
           I've spent a long time watching others learn, and teach, to refine how I work with you to be efficient, useful and, most importantly, memorable. I want you to carry what I've shown you into a bright future.`,

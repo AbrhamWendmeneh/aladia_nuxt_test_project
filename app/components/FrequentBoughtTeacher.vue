@@ -6,7 +6,7 @@ const courses = [
     rating: 4.7,
     reviews: 4863,
     price: "$59.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/image-1.svg",
     bestseller: true,
   },
   {
@@ -15,7 +15,7 @@ const courses = [
     rating: 4.7,
     reviews: 32984,
     price: "$59.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/ztm.svg",
     bestseller: true,
   },
   {
@@ -24,7 +24,7 @@ const courses = [
     rating: 4.7,
     reviews: 32984,
     price: "$59.99",
-    image: "/assets/images/image.jpg",
+    image: "/assets/images/second_image.svg",
     bestseller: false,
   },
 ];
@@ -36,13 +36,13 @@ const courses = [
   >
     <h2 class="text-2xl font-bold mb-6">Frequently Bought Together</h2>
 
-    <div v-for="(course, index) in courses" :key="index" class="relative mb-8">
+    <div v-for="(course, index) in courses" :key="index" class="relative mb-3">
       <div class="flex items-center space-x-2 course-item">
         <!-- Course Image -->
         <img
           :src="course.image"
           :alt="course.title"
-          class="w-38 h-28 object-cover rounded-md"
+          class="w-48 h-28 object-cover"
         />
 
         <!-- Course Details -->
@@ -74,7 +74,13 @@ const courses = [
 
       <!-- Plus Icon between the courses -->
       <div v-if="index < courses.length - 1" class="plus-icon">
-        <span class="text-xl font-bold">+</span>
+        <span class="text-xl font-bold">
+          <img
+            src="/assets/images/plus-svgrepo-com.svg"
+            class="h-5 w-5"
+            alt="Plus Icon"
+          />
+        </span>
       </div>
     </div>
   </div>
@@ -92,11 +98,11 @@ const courses = [
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: calc(6% + 1rem);
+  left: calc(12% + 1rem);
   transform: translateX(-50%);
   top: calc(70% + 1rem);
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.24);
   background-color: #fff;
   border: 1px solid #d1d7dc;

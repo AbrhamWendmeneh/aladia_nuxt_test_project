@@ -27,7 +27,7 @@ export default {
     return {
       courses: [
         {
-          image: "/assets/images/image.jpg",
+          image: "/assets/images/image-1.svg",
           title: "Advanced Figma Techniques for UI/UX Design",
           instructor: "Emily Rose",
           rating: 4.9,
@@ -36,7 +36,7 @@ export default {
           price: "$89.99",
         },
         {
-          image: "/assets/images/image.jpg",
+          image: "/assets/images/image-3.svg",
           title: "Complete Web Design: from Figma to Webflow - 2024 UI",
           instructor: "Jane Doe",
           rating: 4.8,
@@ -45,7 +45,7 @@ export default {
           price: "$74.99",
         },
         {
-          image: "/assets/images/image.jpg",
+          image: "/assets/images/image-2.svg",
           title: "Master Figma for Web Design & Freelancing: Learn UI/UX",
           instructor: "John Smith",
           rating: 4.7,
