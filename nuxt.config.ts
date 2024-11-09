@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
-
+   router: {
+    base: 'aladia_nuxt_test_project',  // Use your GitHub repo name if applicable
+  },
+  target: 'static',
   future: {
     compatibilityVersion: 4,
   },
