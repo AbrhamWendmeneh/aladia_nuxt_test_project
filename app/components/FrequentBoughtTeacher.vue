@@ -1,43 +1,4 @@
-<script setup lang="ts">
-const courses = [
-  {
-    title: "Figma UI UX Design Advanced",
-    author: "Daniel Walter Scott",
-    rating: 4.7,
-    reviews: 4863,
-    price: "$59.99",
-    // image: "/assets/images/image-1.svg",
-    bestseller: true,
-  },
-  {
-    title: "Figma UI UX Design Essentials",
-    author: "Daniel Walter Scott",
-    rating: 4.7,
-    reviews: 32984,
-    price: "$59.99",
-    // image: "/assets/images/ztm.svg",
-    bestseller: true,
-  },
-  {
-    title: "Figma UI UX Design Essentials",
-    author: "Daniel Walter Scott",
-    rating: 4.7,
-    reviews: 32984,
-    price: "$59.99",
-    // image: "/assets/images/second_image.svg",
-    bestseller: false,
-  },
-];
-const getImagePath = (index: number) => {
-  const images = [
-    "/assets/images/image-1.svg",
-    "/assets/images/ztm.svg",
-    "/assets/images/second_image.svg",
-  
-  ];
-  return images[index];
-};
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div
@@ -45,32 +6,30 @@ const getImagePath = (index: number) => {
   >
     <h2 class="text-2xl font-bold mb-6">Frequently Bought Together</h2>
 
-    <div v-for="(course, index) in courses" :key="index" class="relative mb-3">
+    <!-- Course 1 -->
+    <div class="relative mb-3">
       <div class="flex items-center space-x-2 course-item">
         <!-- Course Image -->
         <img
-          :src="getImagePath(index)"
-          :alt=course.title
+          src="/assets/images/image-1.svg"
+          alt="Figma UI UX Design Advanced"
           class="w-48 h-28 object-cover"
         />
 
         <!-- Course Details -->
         <div class="flex-grow">
-          <h3 class="text-lg font-bold">{{ course.title }}</h3>
-          <p class="text-sm text-gray-600">{{ course.author }}</p>
+          <h3 class="text-lg font-bold">Figma UI UX Design Advanced</h3>
+          <p class="text-sm text-gray-600">Daniel Walter Scott</p>
 
           <!-- Rating and Reviews -->
           <div class="flex items-center mt-1 text-yellow-500">
-            <span class="font-semibold">{{ course.rating }}</span>
+            <span class="font-semibold">4.7</span>
             <span class="ml-1">★★★★★</span>
-            <span class="text-xs text-gray-500 ml-2">
-              ({{ course.reviews.toLocaleString() }})
-            </span>
+            <span class="text-xs text-gray-500 ml-2">(4,863)</span>
           </div>
 
           <!-- Bestseller Badge -->
           <span
-            v-if="course.bestseller"
             class="mt-1 inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-0.5 rounded"
           >
             Bestseller
@@ -78,11 +37,11 @@ const getImagePath = (index: number) => {
         </div>
 
         <!-- Price -->
-        <div class="text-lg font-bold text-gray-800">{{ course.price }}</div>
+        <div class="text-lg font-bold text-gray-800">$59.99</div>
       </div>
 
       <!-- Plus Icon between the courses -->
-      <div v-if="index < courses.length - 1" class="plus-icon">
+      <div class="plus-icon">
         <span class="text-xl font-bold">
           <img
             src="/assets/images/plus-svgrepo-com.svg"
@@ -90,6 +49,80 @@ const getImagePath = (index: number) => {
             alt="Plus Icon"
           />
         </span>
+      </div>
+    </div>
+
+    <!-- Course 2 -->
+    <div class="relative mb-3">
+      <div class="flex items-center space-x-2 course-item">
+        <!-- Course Image -->
+        <img
+          src="/assets/images/ztm.svg"
+          alt="Figma UI UX Design Essentials"
+          class="w-48 h-28 object-cover"
+        />
+
+        <!-- Course Details -->
+        <div class="flex-grow">
+          <h3 class="text-lg font-bold">Figma UI UX Design Essentials</h3>
+          <p class="text-sm text-gray-600">Daniel Walter Scott</p>
+
+          <!-- Rating and Reviews -->
+          <div class="flex items-center mt-1 text-yellow-500">
+            <span class="font-semibold">4.7</span>
+            <span class="ml-1">★★★★★</span>
+            <span class="text-xs text-gray-500 ml-2">(32,984)</span>
+          </div>
+
+          <!-- Bestseller Badge -->
+          <span
+            class="mt-1 inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-0.5 rounded"
+          >
+            Bestseller
+          </span>
+        </div>
+
+        <!-- Price -->
+        <div class="text-lg font-bold text-gray-800">$59.99</div>
+      </div>
+
+      <!-- Plus Icon between the courses -->
+      <div class="plus-icon">
+        <span class="text-xl font-bold">
+          <img
+            src="/assets/images/plus-svgrepo-com.svg"
+            class="h-5 w-5"
+            alt="Plus Icon"
+          />
+        </span>
+      </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="relative mb-3">
+      <div class="flex items-center space-x-2 course-item">
+        <!-- Course Image -->
+        <img
+          src="/assets/images/second_image.svg"
+          alt="Figma UI UX Design Essentials"
+          class="w-48 h-28 object-cover"
+        />
+
+        <!-- Course Details -->
+        <div class="flex-grow">
+          <h3 class="text-lg font-bold">Figma UI UX Design Essentials</h3>
+          <p class="text-sm text-gray-600">Daniel Walter Scott</p>
+
+          <!-- Rating and Reviews -->
+          <div class="flex items-center mt-1 text-yellow-500">
+            <span class="font-semibold">4.7</span>
+            <span class="ml-1">★★★★★</span>
+            <span class="text-xs text-gray-500 ml-2">(32,984)</span>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="text-lg font-bold text-gray-800">$59.99</div>
       </div>
     </div>
   </div>
