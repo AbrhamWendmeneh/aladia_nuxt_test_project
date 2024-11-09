@@ -31,3 +31,12 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+      - name: Update repository with hosted URL
+        run: |
+          echo "Hosted URL: https://AbrhamWendmeneh.github.io/aladia_nuxt_test_project/" > HOSTED_URL.md
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add HOSTED_URL.md
+          git commit -m "Add hosted URL"
+          git push origin main
+            
