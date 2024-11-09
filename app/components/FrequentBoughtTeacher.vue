@@ -81,7 +81,6 @@ const courses = [
 </template>
 
 <style scoped>
-/* Custom styles for the course item and plus icon */
 .course-item {
   gap: 1.2rem;
   min-width: 40.8rem;
@@ -95,7 +94,7 @@ const courses = [
   position: absolute;
   left: calc(6% + 1rem);
   transform: translateX(-50%);
-  top: calc(70% + 1rem); /* Adjust the value as needed */
+  top: calc(70% + 1rem);
   height: 4rem;
   width: 4rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.24);

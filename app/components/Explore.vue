@@ -11,16 +11,21 @@ import {
 <template>
   <div class="mt-8 py-[1%] pl-[7%] pr-[1%]">
     <section class="font-extrabold mb-4">Explore related topics</section>
-    <!-- three boxes with border width-1 border radius of 10 in one row-->
 
     <div class="flex w-[30%] space-x-2">
-      <div class="border border-gray-500 rounded-full p-2 text-center">
+      <div
+        class="border border-gray-500 rounded-full p-2 text-center hover:bg-gray-400"
+      >
         Figma
       </div>
-      <div class="border border-gray-500 rounded-full p-2 text-center">
+      <div
+        class="border border-gray-500 rounded-full p-2 text-center hover:bg-gray-400"
+      >
         User Experience Design
       </div>
-      <div class="border border-gray-500 rounded-full p-2 text-center">
+      <div
+        class="border border-gray-500 rounded-full p-2 text-center hover:bg-gray-400"
+      >
         Design
       </div>
     </div>
@@ -95,5 +100,3 @@ import {
     </div>
   </div>
 </template>
-
-

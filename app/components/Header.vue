@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import {
   StarIcon,
   GlobeAltIcon,
@@ -12,6 +12,20 @@ interface User {
 
 const user = ref<User | null>(null);
 const cart = ref(0);
+const showFixedNav = ref(false);
+
+const handleScroll = () => {
+  const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+  showFixedNav.value = window.scrollY > headerHeight;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
@@ -80,17 +94,6 @@ const cart = ref(0);
           </span>
         </NuxtLink>
 
-        <!-- Notifications button with badge
-        <NuxtLink to="#">
-          <button class="relative text-gray-600 hover:text-black">
-            <NotificationsNoneOutlinedIcon class="w-6 h-6" />
-            <span
-              class="absolute -top-1 -right-2 bg-red-500 h-2 w-2 rounded-full"
-            ></span>
-          </button>
-        </NuxtLink> -->
-
-        <!-- User avatar button -->
         <NuxtLink to="#">
           <button class="text-gray-600 hover:text-black">
             <ShoppingCartIcon class="w-8 h-8 text-indigo-600" />
@@ -98,16 +101,17 @@ const cart = ref(0);
         </NuxtLink>
       </div>
 
-      <!-- Log in / Sign up / Language options if user is not authenticated -->
       <div v-else class="flex items-center space-x-4">
         <NuxtLink to="/join/login-popup">
-          <button class="text-gray-600 font-medium hover:text-black">
+          <button
+            class="text-gray-600 font-medium hover:text-black hover:bg-[#f5f6f8] border px-4 py-2 rounded w-1/8"
+          >
             Log in
           </button>
         </NuxtLink>
         <NuxtLink to="/join/signup-popup">
           <button
-            class="text-white bg-indigo-600 hover:bg-indigo-700 font-medium px-4 py-2 rounded-full"
+            class="text-white border bg-[#1B1C1E] hover:bg-[#3f4043] font-medium px-4 py-2 rounded w-1/8"
           >
             Sign up
           </button>
@@ -120,8 +124,37 @@ const cart = ref(0);
       </div>
     </div>
   </header>
+
+  <!-- Fixed navigation bar -->
+  <nav
+    v-show="showFixedNav"
+    class="fixed top-0 left-0 right-0 bg-[#1B1C1E] shadow-md z-[2000] h-24 py-6"
+  >
+    <div class="container mx-auto px-6">
+      <div class="flex items-center space-x-4">
+        <span class="text-white font-bold">Figma UI UX Design Advanced</span>
+      </div>
+      <div class="flex items-center space-x-4 mt-2">
+        <span
+          class="bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded"
+          >Bestseller</span
+        >
+        <span class="text-sm text-white">4.7 ⭐</span>
+        <span class="text-sm text-white">(4,872 ratings)</span>
+        <span class="text-sm text-white">31,904 students</span>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <style scoped>
-/* You can add any additional custom styles here if needed */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
 </style>

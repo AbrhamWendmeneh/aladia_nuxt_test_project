@@ -113,9 +113,9 @@ onUnmounted(() => {
     <!-- Fix Box -->
     <div
       v-show="!isFooterVisible"
-      class="fixed top-[calc(100%-310px)] right-[7%] w-[26.5%] py-[5%] bg-white shadow-[0_2px_2px_rgba(233,233,233,0.4)]"
+      class="fixed top-[calc(100%-310px)] right-[7%] w-[26.5%] py-[5%] px-4 bg-white shadow-[0_2px_2px_rgba(233,233,233,0.4)] border"
     >
-      <div class="text-left ml-[6%]">
+      <div class="text-left mx-[6%]">
         <div class="flex gap-[3%] mb-[2%]">
           <h1 class="text-2xl mt-[-2%]">$455</h1>
           <span class="line-through text-[1.1rem] mt-[-2%]">$3,499</span>
@@ -127,12 +127,12 @@ onUnmounted(() => {
         </div>
 
         <button
-          class="w-full bg-[#A435F0] text-white h-[40px] text-[1.1rem] mt-[4%] border-none cursor-pointer"
+          class="w-full bg-[#A435F0] text-white h-[40px] text-[1.1rem] mt-[4%] border-none cursor-pointer mr-6"
         >
           Go to cart
         </button>
         <button
-          class="w-full h-[40px] text-[1.1rem] border-2 border-black cursor-pointer mt-2"
+          class="w-full h-[40px] text-[1.1rem] border-2 border-black cursor-pointer mt-2 mr-6"
         >
           Buy now
         </button>
