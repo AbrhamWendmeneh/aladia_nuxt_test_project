@@ -5,6 +5,7 @@ import {
   StarIcon,
   CheckBadgeIcon,
   GlobeAltIcon,
+  DevicePhoneMobileIcon,
 } from "@heroicons/vue/24/outline";
 
 const isExpanded = ref(false);
@@ -80,7 +81,7 @@ onUnmounted(() => {
               <StarIcon class="w-4 h-4" />
               <StarIcon class="w-4 h-4" />
               <StarIcon class="w-4 h-4" />
-              <StarHalfSharpIcon class="w-4 h-4" />
+              <StarIcon class="w-4 h-4" />
             </span>
           </span>
           <span class="text-[#C7B9F3] underline">(17,379 rating)</span>
@@ -113,7 +114,7 @@ onUnmounted(() => {
     <!-- Fix Box -->
     <div
       v-show="!isFooterVisible"
-      class="fixed top-[calc(100%-310px)] right-[7%] w-[26.5%] py-[5%] px-4 bg-white shadow-[0_2px_2px_rgba(233,233,233,0.4)] border"
+      class="fixed top-[calc(100%-500px)] right-[7%] w-[26.5%] py-[5%] px-4 bg-white shadow-[0_2px_2px_rgba(233,233,233,0.4)] border"
     >
       <div class="text-left mx-[6%]">
         <div class="flex gap-[3%] mb-[2%]">
@@ -122,7 +123,6 @@ onUnmounted(() => {
           <span class="text-[1.1rem] mt-[-2%]">87% off</span>
         </div>
         <div class="text-red-600">
-          <AccessAlarmsIcon />
           <span class="font-bold">5 hours</span> left at this price!
         </div>
 
@@ -139,15 +139,15 @@ onUnmounted(() => {
 
         <p class="text-center mt-4">30-Day Money-Back Guarantee</p>
 
-        <div class="text-left">
+        <!-- <div class="text-left">
           <h4>This course includes:</h4>
           <p><OndemandVideoSharpIcon /> 21 hours on-demand video</p>
           <p><NoteAddSharpIcon /> 3 articles</p>
           <p><SystemUpdateAltTwoToneIcon /> 4 downloadable resources</p>
           <p><AllInclusiveTwoToneIcon /> Full lifetime access</p>
-          <p><PhoneAndroidTwoToneIcon /> Access on mobile and TV</p>
+          <p><DevicePhoneMobileIcon /> Access on mobile and TV</p>
           <p><EmojiEventsTwoToneIcon /> Certificate of completion</p>
-        </div>
+        </div> -->
 
         <div class="flex gap-5 cursor-pointer underline">
           <h4>Share</h4>

@@ -77,15 +77,14 @@ onUnmounted(() => {
           My learning
         </NuxtLink>
 
-        <NuxtLink to="/wishlist">
-          <button class="relative text-gray-600 hover:text-black">
-            <FavoriteBorderOutlinedIcon class="w-6 h-6" />
+        <NuxtLink to="#">
+          <button class="text-gray-600 hover:text-black">
+            <ShoppingCartIcon class="w-8 h-8 text-indigo-600" />
           </button>
         </NuxtLink>
 
         <!-- Cart button with badge -->
         <NuxtLink to="/cart" class="relative text-gray-600 hover:text-black">
-          <ShoppingCartOutlinedIcon class="w-6 h-6" />
           <span
             v-if="cart > 0"
             class="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5"
@@ -102,6 +101,7 @@ onUnmounted(() => {
       </div>
 
       <div v-else class="flex items-center space-x-4">
+        <ShoppingCartIcon class="w-6 h-6" />
         <NuxtLink to="/join/login-popup">
           <button
             class="text-gray-600 font-medium hover:text-black hover:bg-[#f5f6f8] border px-4 py-2 rounded w-1/8"
