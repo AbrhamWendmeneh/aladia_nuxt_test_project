@@ -27,5 +27,8 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/icon"],
+  app : {
+    baseURL : "aladia_nuxt_test_project"
+  }
   
 });
