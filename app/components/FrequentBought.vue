@@ -58,8 +58,8 @@ const showMore = ref(false);
       <div v-if="index < 3 || showMore" class="flex items-start space-x-4">
         <!-- Course Image -->
         <img
-          :src="course.image"
-          :alt="course.title"
+          :src=course.image
+          :alt=course.title
           class="w-24 h-24 object-cover rounded-md"
         />
 

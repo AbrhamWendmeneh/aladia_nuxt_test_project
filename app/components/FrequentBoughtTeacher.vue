@@ -40,8 +40,8 @@ const courses = [
       <div class="flex items-center space-x-2 course-item">
         <!-- Course Image -->
         <img
-          :src="course.image"
-          :alt="course.title"
+          :src=course.image
+          :alt=course.title
           class="w-48 h-28 object-cover"
         />
 

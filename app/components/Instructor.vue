@@ -36,7 +36,7 @@ export default {
     <div class="flex items-start space-x-4">
       <!-- Instructor Image -->
       <img
-        :src="instructor.image"
+        :src=instructor.image
         alt="Instructor"
         class="w-28 h-28 object-cover rounded-full mt-3"
       />

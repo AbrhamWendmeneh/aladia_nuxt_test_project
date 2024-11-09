@@ -1,8 +1,8 @@
 <template>
   <div class="bg-white">
     <img
-      :src="course.image"
-      :alt="course.title"
+      :src=course.image
+      :alt=course.title
       class="w-full h-36 object-cover mb-4"
     />
     <h3 class="text-lg font-semibold mb-2">{{ course.title }}</h3>
